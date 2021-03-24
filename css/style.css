@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: monospace;
+}
+
+
+.main-container{
+    text-align: center;
+    
+}
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 30%;
+    margin: 0 auto;
+}
+h3{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid{
+    border: 1px solid black;
+    height: 120px;
+    font-size: 2rem;
+}
+
+.right-sideborder{
+    border-right: none;
+}
+
+.bottom-border{
+    border-bottom: none;
+}
+
+.left-sideborder{
+    border-left: none;
+}
+
+.upborder{
+    border-top: none;
+}
