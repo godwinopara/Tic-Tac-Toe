@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TicTacToe Game</title>
     <link rel="stylesheet" href="css/style.css">
-    <script type="module" src="js/main.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script type="module" src="js/main.js" defer></script>
+
 </head>
+
 <body>
     <div class="main-container">
         <header>
@@ -20,34 +24,40 @@
                 <i class="far fa-user fa-5x"></i>
                 <h4>User</h4>
             </div>
-            <div class="game-container">
-                <div class="grid upborder left-sideborder left-diagonal" data-boardnumber="00">
-                    <h3>X</h3>
+            <div class="game-container" id="board-display">
+                <div class="grid" data-board-number="00">
+                    <button type="submit"></button>
                 </div>
-                <div class="grid upborder center-vertical"  data-boardnumber="01">
-                    <h3>X</h3>
+                <div class="grid" data-board-number="01">
+                    <button type="submit"></button>
                 </div>
-                <div class="grid upborder right-sideborder right-diagonal "  data-boardnumber="02">
-                    <h3>X</h3>
+                <div class="grid" data-board-number="02">
+                    <button type="submit"></button>
                 </div>
-                <div class="grid left-sideborder middle-border" data-boardnumber="10">
-                    <h3>O</h3>
+                <div class="grid" data-board-number="10">
+                    <button type="submit"></button>
                 </div>
-                <div class="grid middle-border right-diagonal center-vertical left-diagonal" data-boardnumber="11">
-                    <h3>O</h3>
-                </div>
-                <div class="grid right-sideborder middle-border"  data-boardnumber="12">
-                    <h3>O</h3>
-                </div>
-                <div class="grid left-sideborder bottom-border right-diagonal" data-boardnumber="20">
-                    <h3>X</h3>
-                </div>
-                <div class="grid bottom-border center-vertical" data-boardnumber="21">
-                    <h3>X</h3>
+                <div class="grid" data-board-number="11">
+                    <button type="submit"></button>
 
                 </div>
-                <div class="grid bottom-border right-sideborder left-diagonal" data-boardnumber="22">
-                    <h3>X</h3>
+                <div class="grid" data-board-number="12">
+                    <button type="submit"></button>
+
+                </div>
+                <div class="grid" data-board-number="20">
+                    <button type="submit"></button>
+
+
+                </div>
+                <div class="grid" data-board-number="21">
+                    <button type="submit"></button>
+
+
+                </div>
+                <div class="grid" data-board-number="22">
+                    <button type="submit"></button>
+
 
                 </div>
             </div>
@@ -56,7 +66,12 @@
                 <h4>Computer</h4>
             </div>
         </section>
+
+        <div class="display" >
+            <h4></h4>
+            <input id="input" type="button" value="Restart">
+        </div>
     </div>
-    
 </body>
+
 </html>

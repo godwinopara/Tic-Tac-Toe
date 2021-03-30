@@ -9,6 +9,7 @@
 body{
     font-family: monospace;
     line-height: 1.5;
+    background-color: #08d9d6;
 }
 
 header{
@@ -20,12 +21,20 @@ h1{
     font-size: 3rem;
     padding-bottom: 10px;
 }
-h3{
+button{
     height: 100%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    font-size: 3rem;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    background: inherit;
+    font-family: serif;
+
 }
 h4{
     font-size: 1rem;
@@ -57,6 +66,7 @@ section{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: 30%;
+
 }
 
 .user-icon{
@@ -69,30 +79,73 @@ section{
 }
 
 .grid{
-    border: 3px solid black;
+    border: 2px solid black;
     height: 130px;
     font-size: 2rem;
 }
 
-.grid:hover{
-    background: rgb(243, 236, 236);
-    border-radius: 5px;
+.fa-user{
+    color: #ff2e63;
 }
 
-.right-sideborder{
-    border-right: none;
+.fa-robot{
+    color: #252a34;
 }
 
-.bottom-border{
+.game-container div:first-child,
+.game-container div:nth-child(2),
+.game-container div:nth-child(3){
+    border-top: none;
+}
+.game-container div:last-child,
+.game-container div:nth-last-child(2),
+.game-container div:nth-last-child(3){
     border-bottom: none;
 }
 
-.left-sideborder{
+.game-container div:first-child,
+.game-container div:nth-child(4),
+.game-container div:nth-child(7){
     border-left: none;
 }
 
-.upborder{
-    border-top: none;
+.game-container div:nth-child(3),
+.game-container div:nth-child(6),
+.game-container div:nth-child(9){
+    border-right: none;
+}
+
+.display{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.display h4{
+    font-size: 4rem;
+    font-family: serif;
+    color: rgb(255, 255, 255);
+}
+
+
+.display input{
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+
+.display input:hover{
+    background: black;
+    color: #fff;
 }
 
 
