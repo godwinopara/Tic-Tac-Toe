@@ -3,15 +3,23 @@ const displayWinner = document.querySelector(".display")
 const displayWinnerText = document.querySelector(".display h4")
 const restartButton = document.querySelector(".display input")
 const playerScore = document.querySelector(".player");
-console.log(playerScore)
+
 const computerScore = document.querySelector(".computer")
 const resetScoreBoard = document.querySelector(".reset-score-board")
+
 
 let updatePlayerScore = 0;
 let updateComputerScore = 0;
 
 
+
+
 restartButton.addEventListener("click", restartGame)
+resetScoreBoard.addEventListener("click",resetScore)
+
+
+
+
 
 const ticTacToeBoard = [
 
@@ -205,6 +213,12 @@ function draw() {
 function updateScore() {
     playerScore.textContent = updatePlayerScore;
     computerScore.textContent = updateComputerScore
+}
+
+function resetScore(){
+    updatePlayerScore = 0;
+    updateComputerScore = 0;
+    updateScore()
 }
 
 function playGame() {
