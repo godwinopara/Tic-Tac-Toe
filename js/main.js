@@ -2,17 +2,16 @@ const boardDisplay = document.querySelectorAll("#board-display div")
 const displayWinner = document.querySelector(".display")
 const displayWinnerText = document.querySelector(".display h4")
 const restartButton = document.querySelector(".display input")
+const playerScore = document.querySelector(".player");
+console.log(playerScore)
+const computerScore = document.querySelector(".computer")
+const resetScoreBoard = document.querySelector(".reset-score-board")
 
-
+let updatePlayerScore = 0;
+let updateComputerScore = 0;
 
 
 restartButton.addEventListener("click", restartGame)
-
-
-
-
-
-
 
 const ticTacToeBoard = [
 
@@ -45,10 +44,10 @@ displayBoard()
 
 
 /*
-    **********************
-    **********************
-    **********************
-*/
+ **********************
+ **********************
+ **********************
+ */
 
 
 
@@ -98,9 +97,9 @@ function emptyBoardPositon() {
     return emptyPositions
 }
 /*
-************************************************
-************************************************
-*/
+ ************************************************
+ ************************************************
+ */
 
 
 
@@ -198,9 +197,14 @@ function displayWinnerToPage(mark) {
     displayWinner.style.display = "flex"
 }
 
-function draw(){
+function draw() {
     displayWinnerText.innerHTML = `<h4>Draw!</h4>`
     displayWinner.style.display = "flex"
+}
+
+function updateScore() {
+    playerScore.textContent = updatePlayerScore;
+    computerScore.textContent = updateComputerScore
 }
 
 function playGame() {
@@ -208,20 +212,23 @@ function playGame() {
         element.addEventListener("click", () => {
             userPlayer("X")
             checkWin("X")
-            if (boardIsFull() && !checkWin("X") || boardIsFull() && !checkWin("O")){
+            if (boardIsFull() && !checkWin("X") || boardIsFull() && !checkWin("O")) {
                 draw()
             }
             if (checkWin("X")) {
                 displayWinnerToPage("X")
+                updatePlayerScore++
             }
             if (!boardIsFull() & !checkWin("X")) {
                 computerPlayer("O")
                 if (checkWin("O")) {
                     displayWinnerToPage("O")
+                    updateComputerScore++
                 }
             }
 
-            
+
+            updateScore()
 
             displayBoard()
 

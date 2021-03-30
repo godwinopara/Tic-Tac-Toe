@@ -19,10 +19,16 @@
             <h1>Tic Tac Toe Game</h1>
             <p>The odin project TicTacToe project</p>
         </header>
+        <button class="reset-score-board">Reset Score Board</button>
         <section>
             <div class="user-icon">
+                <div id="ticX">X</div>
                 <i class="far fa-user fa-5x"></i>
-                <h4>User</h4>
+                <div class="score">
+                    <div class="player">
+                        <div>0</div>
+                    </div>
+                </div>
             </div>
             <div class="game-container" id="board-display">
                 <div class="grid" data-board-number="00">
@@ -62,12 +68,18 @@
                 </div>
             </div>
             <div class="computer-icon">
+                <div id="ticO">O</div>
                 <i class="fas fa-robot fa-5x"></i>
-                <h4>Computer</h4>
+                <div class="score comp-score">
+                    <div class="computer">
+                        <div>0</div>
+                    </div>
+
+                </div>
             </div>
         </section>
 
-        <div class="display" >
+        <div class="display">
             <h4></h4>
             <input id="input" type="button" value="Restart">
         </div>
