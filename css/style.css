@@ -38,11 +38,12 @@ button {
 
 .reset-score-board {
   font-size: 1rem;
-  border: 1px solid #333;
+  border: 3px solid #364f6b;
   width: auto;
   margin: 10px auto 25px;
   padding: 10px;
   border-radius: 10px;
+  color: #333;
 }
 
 h4 {
@@ -112,11 +113,7 @@ section {
   color: #364f6b;
 }
 
-/* .computer div,
-.player div{
-    
-  padding: 20px;
-} */
+
 
 .player {
   color: #ff2e63;
@@ -124,7 +121,7 @@ section {
 }
 
 .grid {
-  border: 2px solid black;
+  border: 2px solid #364f6b;
   height: 100px;
   width: 100px;
   font-size: 2rem;
@@ -189,7 +186,7 @@ section {
 }
 
 .display input:hover {
-  background: black;
+  background: #333;
   color: #fff;
 }
 

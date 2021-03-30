@@ -8,6 +8,8 @@ const computerScore = document.querySelector(".computer")
 const resetScoreBoard = document.querySelector(".reset-score-board")
 
 
+
+
 let updatePlayerScore = 0;
 let updateComputerScore = 0;
 
